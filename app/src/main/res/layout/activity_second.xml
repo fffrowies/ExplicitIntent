@@ -14,8 +14,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Placeholder Text"
-        android:textStyle="bold"
+        android:textColor="#8E8C8C"
         android:textSize="30sp"
-        android:textColor="#8E8C8C"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>
