@@ -23,15 +23,29 @@ public class MainActivity extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-
-                Bundle b = new Bundle();
-                b.putString(Constants.KEY_NAME, nameEditText.getText().toString());
-                b.putInt(Constants.KEY_AGE, 57);
-
-                intent.putExtras(b);
-                startActivity(intent);
+                //moveToSecondActivity_FirstWay();
+                moveToSecondActivity_SecondWay();
             }
         });
+    }
+
+    private void moveToSecondActivity_FirstWay() {
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+        Bundle b = new Bundle();
+        b.putString(Constants.KEY_NAME, nameEditText.getText().toString());
+        b.putInt(Constants.KEY_AGE, 57);
+
+        intent.putExtras(b);
+        startActivity(intent);
+    }
+
+    private void moveToSecondActivity_SecondWay() {
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+        intent.putExtra(Constants.KEY_NAME, nameEditText.getText().toString());
+        intent.putExtra(Constants.KEY_AGE, 56);
+
+        startActivity(intent);
     }
 }
